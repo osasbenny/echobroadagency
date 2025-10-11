@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, Youtube } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -68,7 +68,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-gold">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/echobroad?mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-gold transition-colors"
@@ -84,20 +84,20 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/n-broad-socials/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-gold transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://youtube.com/@daviduwak?si=BA-T5-d_a7Rbl1rx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gold transition-colors"
+              >
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
