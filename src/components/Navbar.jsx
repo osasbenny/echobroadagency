@@ -9,11 +9,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services', icon: Briefcase },
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Services', path: '/services', icon: Briefcase },
     { name: 'E-Store', path: '/store', icon: ShoppingBag },
     { name: 'Courses', path: '/courses', icon: BookOpen },
     { name: 'Blog', path: '/blog', icon: FileText },
-    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ]
 
