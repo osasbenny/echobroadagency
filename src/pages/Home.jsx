@@ -95,7 +95,7 @@ export default function Home() {
             Amplify Your Brand's <span className="text-gold">Voice</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Digital marketing and creative media solutions that drive real results
+            From Strategy To Visuals, We Help Businesses Turn Views To Clients!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/store">
