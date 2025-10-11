@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ShoppingBag, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import logo from '../assets/echobroad-logo.jpg'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,11 +20,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-white">Echo</span>
-              <span className="text-red">Broad</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="EchoBroad Agency" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
