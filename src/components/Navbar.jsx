@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ShoppingBag, BookOpen } from 'lucide-react'
+import { Menu, X, ShoppingBag, BookOpen, Briefcase, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import logo from '../assets/echobroad-logo.jpg'
 
@@ -9,8 +9,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services', icon: Briefcase },
     { name: 'E-Store', path: '/store', icon: ShoppingBag },
     { name: 'Courses', path: '/courses', icon: BookOpen },
+    { name: 'Blog', path: '/blog', icon: FileText },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ]
