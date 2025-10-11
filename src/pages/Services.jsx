@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Megaphone, PenTool, Video, BarChart3 } from 'lucide-react'
+import { Target, TrendingUp, Megaphone, PenTool, Video, BarChart3, Globe, Palette } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 
@@ -33,6 +33,16 @@ export default function Services() {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Data-driven insights and comprehensive reporting to track performance, measure success, and optimize your marketing efforts.'
+    },
+    {
+      icon: Globe,
+      title: 'Website Design',
+      description: 'Beautiful, responsive, and user-friendly websites that convert visitors into customers. From landing pages to full e-commerce solutions.'
+    },
+    {
+      icon: Palette,
+      title: 'Branding',
+      description: 'Create a memorable brand identity that resonates with your audience. From logo design to complete brand guidelines and visual identity systems.'
     }
   ]
 
