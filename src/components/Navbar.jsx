@@ -38,9 +38,9 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link to="/dashboard">
+            <Link to="/contact">
               <Button className="bg-red hover:bg-red/90 text-white">
-                Dashboard
+                Get Started
               </Button>
             </Link>
           </div>
@@ -73,11 +73,11 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              to="/dashboard"
+              to="/contact"
               className="text-white hover:text-gold hover:bg-white/5 block px-3 py-2 rounded-md font-medium transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Dashboard
+              Get Started
             </Link>
           </div>
         </div>

@@ -1,82 +1,112 @@
 export const products = [
   {
     id: 1,
-    name: 'Ad Targeting Bundle (Facebook & Instagram)',
-    price: 15000,
-    shortDescription: 'A collection of high-converting audience targeting lists for Facebook and Instagram Ads.',
-    longDescription: 'This comprehensive bundle includes proven audience targeting strategies, custom audience templates, lookalike audience guides, and detailed demographic breakdowns that have generated millions in ad revenue. Perfect for marketers looking to improve their ad performance and reduce cost per acquisition.',
-    category: 'Advertising',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
+    name: 'Social Media: The New Money Making Machine',
+    price: 2000,
+    shortDescription: 'Proven secret strategies to monetize your social media presence.',
+    longDescription: 'Discover the proven strategies to turn your social media presence into a profitable business. This comprehensive guide reveals the secrets of successful social media entrepreneurs and provides actionable steps to monetize your content, grow your audience, and build a sustainable online income. Includes a free Facebook Ad Course as a bonus.',
+    category: 'E-Book',
+    image: '/src/assets/product1-social-media-the-new-money-making-machine.jpg',
     features: [
-      'Custom audience templates',
-      'Lookalike audience strategies',
-      'Demographic targeting guides',
-      'Interest-based targeting lists',
-      'Behavior targeting frameworks'
+      'Proven monetization strategies',
+      'Audience growth tactics',
+      'Content creation frameworks',
+      'Free Facebook Ad Course included',
+      'Step-by-step implementation guide'
     ]
   },
   {
     id: 2,
-    name: 'Ad Copywriting Templates',
-    price: 10000,
-    shortDescription: '100+ customizable ad copy templates for different campaign objectives.',
-    longDescription: 'Master the art of persuasive advertising with our collection of 100+ proven ad copy templates. Each template is designed for specific campaign objectives including awareness, consideration, and conversion. Includes headlines, body copy, and call-to-action variations that have driven millions in sales.',
-    category: 'Copywriting',
-    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop',
+    name: 'Facebook/Instagram Ads Course',
+    price: 20000,
+    shortDescription: 'Professional Facebook and Instagram advertising course from beginner to expert.',
+    longDescription: 'Master Facebook and Instagram advertising with this comprehensive course that takes you from beginner to expert. Learn business manager setup, business page creation, ad account configuration, targeting and retargeting strategies, campaign objectives, budget and placement optimization, pixel installation, payment issue resolution, and how to reinstate disabled pages and ad accounts. Taught by David Uwak, Media Buyer and CEO of N-Broad Digital.',
+    category: 'Course',
+    image: '/src/assets/product5-meta-ad-training.jpg',
     features: [
-      '100+ proven templates',
-      'Multiple campaign objectives',
-      'Headline variations',
-      'CTA formulas',
-      'A/B testing frameworks'
+      'Business Manager Set Up',
+      'Business Page Set Up',
+      'Ad Account Set up',
+      'Targeting & Retargeting',
+      'Campaign Objectives Redefined',
+      'Budget/Placement',
+      'Ad set up',
+      'Pixels Installation',
+      'Payment Issues Resolve',
+      'Reinstate disabled Page/ad account'
     ]
   },
   {
     id: 3,
-    name: 'Social Media Content Calendar (90 Days)',
-    price: 7500,
-    shortDescription: 'Ready-to-use 3-month content plan with captions, post ideas, and hashtags.',
-    longDescription: 'Never run out of content ideas again! This 90-day content calendar includes daily post ideas, pre-written captions, trending hashtags, and optimal posting times. Designed for maximum engagement across all major social platforms including Instagram, Facebook, Twitter, and LinkedIn.',
-    category: 'Social Media',
-    image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop',
+    name: "The Real Estate Agent's Facebook Ads",
+    price: 25000,
+    shortDescription: 'Playbook to mastering the art of lead generation and conversion for real estate agents.',
+    longDescription: 'The ultimate Facebook Ads playbook specifically designed for real estate agents. Learn how to generate more qualified leads, master the art of lead generation and conversion, and close more deals using proven Facebook advertising strategies. This comprehensive guide provides step-by-step instructions, targeting strategies, ad copy templates, and funnel blueprints tailored for the real estate industry.',
+    category: 'E-Book',
+    image: '/src/assets/product3-the-real-agents-of-socialmedia.jpg',
     features: [
-      '90 days of content',
-      'Pre-written captions',
-      'Trending hashtags',
-      'Posting schedule',
-      'Multi-platform support'
+      'Real estate-specific ad strategies',
+      'Lead generation frameworks',
+      'Conversion optimization techniques',
+      'Ad copy templates for real estate',
+      'Funnel blueprints',
+      'Targeting strategies for property buyers'
     ]
   },
   {
     id: 4,
-    name: 'Digital Marketing Strategy Toolkit',
-    price: 12000,
-    shortDescription: 'Strategy templates, funnels, and briefing documents for agencies.',
-    longDescription: 'The complete toolkit for digital marketing agencies and consultants. Includes client onboarding templates, marketing strategy frameworks, sales funnel blueprints, campaign brief templates, and reporting dashboards. Everything you need to deliver professional services to your clients.',
-    category: 'Strategy',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+    name: "God Doesn't Make A Junk",
+    price: 3000,
+    shortDescription: 'Unveiling the hidden powers of the redeemed man.',
+    longDescription: 'A transformative book that unveils the hidden powers of the redeemed man. Discover your true identity in Christ, understand your purpose, and unlock the potential that God has placed within you. This inspiring read combines biblical principles with practical insights to help you live a life of significance and impact. Written by David Uwak.',
+    category: 'E-Book',
+    image: '/src/assets/god-doesn-t-make-a-junk-selar.co-61d362485b148.jpg',
     features: [
-      'Client onboarding templates',
-      'Strategy frameworks',
-      'Funnel blueprints',
-      'Campaign briefs',
-      'Reporting templates'
+      'Biblical principles for identity',
+      'Discovering your purpose',
+      'Unlocking hidden potential',
+      'Practical life applications',
+      'Inspirational and transformative content'
     ]
   },
   {
     id: 5,
-    name: 'Graphic Design Template Pack',
-    price: 9000,
-    shortDescription: 'Editable Canva templates for ads, branding, and client presentations.',
-    longDescription: 'Professional design made easy! This pack includes 50+ fully customizable Canva templates for social media posts, ad creatives, Instagram stories, Facebook covers, presentation decks, and brand identity materials. All templates follow modern design principles and are optimized for engagement.',
-    category: 'Design',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
+    name: 'Meta (Facebook/Instagram) Ad Targeting Bundle',
+    price: 5000,
+    shortDescription: 'Research. Tested. Proven. DIY Meta targeting strategies for different niches.',
+    longDescription: 'This comprehensive targeting bundle provides research-backed, tested, and proven Meta (Facebook/Instagram) ad targeting strategies for different niches. Learn the interest, behaviour, and demographics that work best for various industries and audiences. Perfect for marketers and business owners who want to improve their ad performance and reduce wasted ad spend.',
+    category: 'Digital Product',
+    image: '/src/assets/meta-targeting-bundle.jpg',
     features: [
-      '50+ Canva templates',
-      'Social media formats',
-      'Ad creative templates',
-      'Presentation decks',
-      'Brand identity materials'
+      'Research-backed targeting strategies',
+      'Interest-based targeting',
+      'Behaviour targeting',
+      'Demographics for different niches',
+      'Proven to reduce ad costs',
+      'DIY implementation guide'
+    ]
+  },
+  {
+    id: 6,
+    name: 'One on One Live Facebook/Instagram Advertising Coaching (Online)',
+    price: 50000,
+    shortDescription: 'Stop losing money on unprofitable ads. Learn how to run profitable ads in 3 days.',
+    longDescription: 'Get personalized one-on-one coaching with David Uwak, Media Buyer and CEO of N-Broad Digital. This intensive 3-day online coaching program will teach you how to stop losing money on unprofitable ads and start running campaigns that generate real results. Includes business manager setup, business page setup, ad account setup, targeting and retargeting, campaign objectives, budget and placement optimization, ad setup, pixel installation, payment issue resolution, and how to reinstate disabled pages and ad accounts.',
+    category: 'Coaching',
+    image: '/src/assets/product6-one-on-one-coaching.jpg',
+    features: [
+      'One-on-one personalized coaching',
+      'Business Manager Set Up',
+      'Business Page Set Up',
+      'Ad Account Set up',
+      'Targeting & Retargeting',
+      'Campaign Objectives Redefined',
+      'Budget/Placement',
+      'Ad set up',
+      'Pixels Installation',
+      'Payment Issues Resolve',
+      'Reinstate disabled Page/ad account',
+      '3-day intensive program'
     ]
   }
 ]
