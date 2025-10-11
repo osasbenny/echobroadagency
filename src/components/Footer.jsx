@@ -108,12 +108,12 @@ export default function Footer() {
           <p className="mt-2">
             Designed by{' '}
             <a
-              href="https://cactusdigitalmedia.ng"
+              href="https://echobroad.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold hover:text-gold/80 transition-colors"
             >
-              Cactus Digital Media
+              EchoBroad Team
             </a>
           </p>
         </div>
