@@ -137,9 +137,8 @@ export default function Contact() {
                       <Mail className="w-6 h-6 text-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Email</h3>
+                      <h3 className="font-semibold text-navy mb-1">Email Us</h3>
                       <p className="text-gray-600">info@echobroad.com</p>
-                      <p className="text-gray-600">support@echobroad.com</p>
                     </div>
                   </div>
 
@@ -148,9 +147,8 @@ export default function Contact() {
                       <Phone className="w-6 h-6 text-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Phone</h3>
-                      <p className="text-gray-600">+234 800 000 0000</p>
-                      <p className="text-gray-600">+234 800 000 0001</p>
+                      <h3 className="font-semibold text-navy mb-1">Call Us</h3>
+                      <p className="text-gray-600">+2349071447959</p>
                     </div>
                   </div>
 
@@ -159,11 +157,10 @@ export default function Contact() {
                       <MapPin className="w-6 h-6 text-gold" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Office</h3>
+                      <h3 className="font-semibold text-navy mb-1">Address</h3>
                       <p className="text-gray-600">
-                        123 Marketing Street<br />
-                        Victoria Island<br />
-                        Lagos, Nigeria
+                        30 East West Road, Rumuodara,<br />
+                        Port Harcourt, Nigeria
                       </p>
                     </div>
                   </div>
@@ -171,11 +168,10 @@ export default function Contact() {
               </div>
 
               <div className="bg-navy text-white rounded-lg shadow-md p-8">
-                <h3 className="text-xl font-bold mb-4">Business Hours</h3>
+                <h3 className="text-xl font-bold mb-4">Working Hours</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Mon - Fri: 24 Hours</p>
+                  <p>Saturday & Sunday: 24 Hours</p>
                 </div>
               </div>
 

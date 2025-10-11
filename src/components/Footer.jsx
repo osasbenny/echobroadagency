@@ -54,11 +54,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-300 text-sm">
                 <Phone className="w-4 h-4 text-red" />
-                +234 800 000 0000
+                +2349071447959
               </li>
               <li className="flex items-center gap-2 text-gray-300 text-sm">
                 <MapPin className="w-4 h-4 text-red" />
-                Lagos, Nigeria
+                30 East West Road, Rumuodara, Port Harcourt
               </li>
             </ul>
           </div>
@@ -105,6 +105,17 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} EchoBroad Agency. All rights reserved.</p>
+          <p className="mt-2">
+            Designed by{' '}
+            <a
+              href="https://cactusdigitalmedia.ng"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:text-gold/80 transition-colors"
+            >
+              Cactus Digital Media
+            </a>
+          </p>
         </div>
       </div>
     </footer>
