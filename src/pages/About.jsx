@@ -109,7 +109,7 @@ export default function About() {
                 <img 
                   src="/images/DavidUwak.FounderCEO.jpg" 
                   alt="David Uwak - CEO" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 text-center">
@@ -125,7 +125,7 @@ export default function About() {
                 <img 
                   src="/images/UBUwak.ChiefMarketingOfficer.jpg" 
                   alt="UB Uwak - CMO" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 text-center">
@@ -141,7 +141,7 @@ export default function About() {
                 <img 
                   src="/images/Creativedirector.jpg" 
                   alt="Creative Director" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 text-center">
@@ -157,7 +157,7 @@ export default function About() {
                 <img 
                   src="/images/OsagieBernardE.WebsiteDesigner.JPG" 
                   alt="Osagie Bernard E. - Website Designer" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 text-center">
