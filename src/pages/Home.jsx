@@ -117,7 +117,15 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-navy mb-12">
+          <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-center text-navy mb-12">
             Why Choose <span className="text-red">EchoBroad</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -139,7 +147,15 @@ export default function Home() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy mb-4">
+            <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-navy mb-4">
               Our <span className="text-red">Services</span>
             </h2>
             <p className="text-xl text-gray-600">
@@ -173,7 +189,15 @@ export default function Home() {
       {/* Our Clients Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-navy mb-12">
+          <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-center text-navy mb-12">
             Trusted by <span className="text-red">Leading Brands</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
@@ -197,7 +221,15 @@ export default function Home() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy mb-4">
+            <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-navy mb-4">
               Digital Products <span className="text-red">&</span> Resources
             </h2>
             <p className="text-xl text-gray-600">
@@ -250,7 +282,15 @@ export default function Home() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy mb-4">
+            <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-navy mb-4">
               Master Digital <span className="text-red">Marketing</span>
             </h2>
             <p className="text-xl text-gray-600">
@@ -316,7 +356,15 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-navy text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-center mb-12">
             What Our <span className="text-gold">Clients Say</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,7 +394,15 @@ export default function Home() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy mb-4">
+            <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold text-navy mb-4">
               Latest from Our <span className="text-red">Blog</span>
             </h2>
             <p className="text-xl text-gray-600">
@@ -396,13 +452,21 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-red text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to <span className="text-gold">Transform</span> Your Business?</h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss your goals and how EchoBroad Agency can help you achieve them.
+          </p>
+          <Link to="/contact">
+            <Button className="bg-navy hover:bg-navy/90 text-white px-8 py-4 text-lg">
+              Book A FREE Strategy Session
+            </Button>
+          </Link>ont-bold mb-6">Ready to Grow Your Business?</h2>
           <p className="text-xl mb-8">
             Join thousands of marketers and entrepreneurs who trust EchoBroad
           </p>
           <Link to="/contact">
             <Button className="bg-white text-red hover:bg-gray-100 px-8 py-6 text-lg">
-              Get Started Today
+              Book A FREE Strategy Session
             </Button>
           </Link>
         </div>

@@ -132,7 +132,7 @@ export default function Courses() {
           </p>
           <Link to="/contact">
             <Button className="bg-white text-red hover:bg-gray-100 px-8 py-4">
-              Get in Touch
+              Book A FREE Strategy Session
             </Button>
           </Link>
         </div>
