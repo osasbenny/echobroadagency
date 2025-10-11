@@ -57,12 +57,16 @@ export default function Home() {
   ]
 
   const clients = [
-    { name: 'Vinelo', logo: client2 },
-    { name: 'Client 4', logo: client4 },
-    { name: 'Chicken Republic', logo: client6 },
-    { name: 'Great Ville Hotels', logo: client8 },
-    { name: 'Acactus Digital Media', logo: client10 },
-    { name: 'Blue Creators', logo: client12 }
+    { name: 'Vinelo', logo: '/images/client2.jpg' },
+    { name: 'Client 4', logo: '/images/client4.jpg' },
+    { name: 'Chicken Republic', logo: '/images/client6.jpg' },
+    { name: 'Great Ville Hotels', logo: '/images/client8.jpg' },
+    { name: 'Acactus Digital Media', logo: '/images/client10.jpeg' },
+    { name: 'Blue Creators', logo: '/images/client12.jpeg' },
+    { name: 'MelonyPine', logo: '/images/client13.jpeg' },
+    { name: 'KINGSPiRE Resources', logo: '/images/client7.jpg' },
+    { name: 'excelandgrace CONSULTING', logo: '/images/client9.jpg' },
+    { name: 'SWITCHPATH CONSULTING', logo: '/images/client1.jpg' }
   ]
 
   const testimonials = [
