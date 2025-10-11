@@ -100,14 +100,82 @@ export default function About() {
 
       {/* Team Section */}
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-navy mb-6">Our Expert Team</h2>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            Our team consists of seasoned digital marketing professionals, certified ad specialists, award-winning designers, and experienced educators. Each member brings unique expertise and a shared commitment to helping you succeed.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            With combined decades of experience managing millions in ad spend, creating thousands of campaigns, and training tens of thousands of students, we know what works in digital marketing—and we're here to share that knowledge with you.
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-navy mb-12 text-center">Our Expert Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* CEO - David Uwak */}
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/images/DavidUwak.FounderCEO.jpg" 
+                  alt="David Uwak - CEO" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-navy mb-1">David Uwak</h3>
+                <p className="text-gold font-medium mb-2">Founder & CEO</p>
+                <p className="text-gray-600 text-sm">Media Buyer & Digital Marketing Expert</p>
+              </div>
+            </div>
+
+            {/* CMO - UB Uwak */}
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/images/UBUwak.ChiefMarketingOfficer.jpg" 
+                  alt="UB Uwak - CMO" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-navy mb-1">UB Uwak</h3>
+                <p className="text-gold font-medium mb-2">Chief Marketing Officer</p>
+                <p className="text-gray-600 text-sm">Strategic Marketing Leader</p>
+              </div>
+            </div>
+
+            {/* Creative Director */}
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/images/Creativedirector.jpg" 
+                  alt="Creative Director" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-navy mb-1">Creative Director</h3>
+                <p className="text-gold font-medium mb-2">Creative Director</p>
+                <p className="text-gray-600 text-sm">Visual Storytelling Expert</p>
+              </div>
+            </div>
+
+            {/* Website Designer - Osagie Bernard E. */}
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/images/OsagieBernardE.WebsiteDesigner.JPG" 
+                  alt="Osagie Bernard E. - Website Designer" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-navy mb-1">Osagie Bernard E.</h3>
+                <p className="text-gold font-medium mb-2">Website Designer</p>
+                <p className="text-gray-600 text-sm">Web Development Specialist</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center max-w-4xl mx-auto">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Our team consists of seasoned digital marketing professionals, certified ad specialists, award-winning designers, and experienced educators. Each member brings unique expertise and a shared commitment to helping you succeed.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              With combined decades of experience managing millions in ad spend, creating thousands of campaigns, and training tens of thousands of students, we know what works in digital marketing—and we're here to share that knowledge with you.
+            </p>
+          </div>
         </div>
       </section>
     </div>
