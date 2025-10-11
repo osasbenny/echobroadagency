@@ -30,7 +30,7 @@ export default function ProductDetail() {
     // Initialize Paystack payment
     // Note: In production, you would use your live public key
     const handler = window.PaystackPop.setup({
-      key: 'pk_test_xxxxxxxxxxxx', // Replace with actual Paystack public key
+      key: 'pk_live_2f7d2486e853aa99725c51f0528bade2c71c07cf', // Live Paystack public key
       email: 'customer@email.com', // Get from user input or auth
       amount: product.price * 100, // Amount in kobo
       currency: 'NGN',
