@@ -1,10 +1,10 @@
 <?php
 /**
  * Contact Form Handler with PHPMailer and SMTP
- * Sends emails using SMTP instead of PHP mail() function
+ * Enhanced version with better error reporting and debugging
  */
 
-// Enable error reporting for debugging (disable in production)
+// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
@@ -37,9 +37,25 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+// Capture debug output
+ob_start();
+
 try {
     // Load SMTP configuration
+    if (!file_exists('smtp-config.php')) {
+        throw new Exception('SMTP configuration file not found. Please ensure smtp-config.php exists.');
+    }
+    
     $config = require 'smtp-config.php';
+    
+    // Validate configuration
+    if (empty($config['smtp_host']) || empty($config['smtp_username']) || empty($config['smtp_password'])) {
+        throw new Exception('SMTP configuration is incomplete. Please check smtp-config.php');
+    }
+    
+    if ($config['smtp_password'] === 'YOUR_PASSWORD_HERE') {
+        throw new Exception('SMTP password not configured. Please update smtp-config.php with your actual password.');
+    }
     
     // Get the JSON input
     $input = file_get_contents('php://input');
@@ -78,15 +94,36 @@ try {
     // Server settings
     $mail->isSMTP();
     $mail->Host       = $config['smtp_host'];
-    $mail->SMTPAuth   = true;
+    $mail->SMTPAuth   = $config['smtp_auth'];
     $mail->Username   = $config['smtp_username'];
     $mail->Password   = $config['smtp_password'];
-    $mail->SMTPSecure = $config['smtp_encryption'];
     $mail->Port       = $config['smtp_port'];
     $mail->CharSet    = 'UTF-8';
+    $mail->Timeout    = $config['smtp_timeout'];
     
-    // Enable verbose debug output (set to 0 in production)
+    // Set encryption if specified
+    if (!empty($config['smtp_encryption'])) {
+        if ($config['smtp_encryption'] === 'tls') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        } elseif ($config['smtp_encryption'] === 'ssl') {
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        }
+    }
+    
+    // Enable verbose debug output
     $mail->SMTPDebug  = $config['smtp_debug'];
+    $mail->Debugoutput = function($str, $level) {
+        error_log("PHPMailer Debug [$level]: $str");
+    };
+    
+    // Additional SMTP options for better compatibility
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
     
     // Recipients
     $mail->setFrom($config['from_email'], $config['from_name']);
@@ -143,7 +180,7 @@ try {
 </body>
 </html>";
 
-    // Plain text version for email clients that don't support HTML
+    // Plain text version
     $mail->AltBody = "New Contact Form Submission\n\n";
     $mail->AltBody .= "Name: {$name}\n";
     $mail->AltBody .= "Email: {$email}\n";
@@ -156,25 +193,52 @@ try {
     // Send email
     $mail->send();
     
+    // Get debug output
+    $debug_output = ob_get_clean();
+    
     // Log successful submission
     error_log("Contact form submission successful from: {$email}");
     
     http_response_code(200);
     echo json_encode([
         'success' => true,
-        'message' => 'Thank you for your message! We will get back to you soon.'
+        'message' => 'Thank you for your message! We will get back to you soon.',
+        'debug' => $config['verbose_errors'] ? $debug_output : null
     ]);
 
 } catch (Exception $e) {
+    // Get debug output
+    $debug_output = ob_get_clean();
+    
     // Log the error
     error_log("Contact form error: " . $e->getMessage());
+    error_log("Debug output: " . $debug_output);
+    
+    // Prepare error response
+    $error_message = 'Sorry, there was an error sending your message. Please try again later or contact us directly at info@echobroad.com.';
+    
+    $response = [
+        'success' => false,
+        'message' => $error_message
+    ];
+    
+    // Include detailed error info if verbose errors are enabled
+    if (isset($config['verbose_errors']) && $config['verbose_errors']) {
+        $response['error_details'] = $e->getMessage();
+        $response['debug_output'] = $debug_output;
+        
+        // Add configuration hints
+        $response['config_check'] = [
+            'smtp_host' => $config['smtp_host'],
+            'smtp_port' => $config['smtp_port'],
+            'smtp_encryption' => $config['smtp_encryption'],
+            'smtp_username' => $config['smtp_username'],
+            'password_set' => !empty($config['smtp_password']) && $config['smtp_password'] !== 'YOUR_PASSWORD_HERE'
+        ];
+    }
     
     http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'message' => 'Sorry, there was an error sending your message. Please try again later or contact us directly at info@echobroad.com.',
-        'error' => $config['smtp_debug'] > 0 ? $e->getMessage() : null
-    ]);
+    echo json_encode($response);
 }
 ?>
 
