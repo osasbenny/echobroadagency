@@ -1,18 +1,18 @@
 export const products = [
   {
     id: 1,
-    name: 'Social Media: The New Money Making Machine',
-    price: 2000,
-    shortDescription: 'Proven secret strategies to monetize your social media presence.',
-    longDescription: 'Discover the proven strategies to turn your social media presence into a profitable business. This comprehensive guide reveals the secrets of successful social media entrepreneurs and provides actionable steps to monetize your content, grow your audience, and build a sustainable online income. Includes a free Facebook Ad Course as a bonus.',
+    name: 'Dear Youth, This Is How Not to Be a Fool at 40',
+    price: 5000,
+    shortDescription: 'A survival guide for today’s youth navigating the unpredictable road to adulthood.',
+    longDescription: '"Dear Youth, This Is How Not to Be a Fool at 40” is more than a book — it’s a survival guide for today’s youth navigating the unpredictable road to adulthood. This is your Cheat Card to Success Before 40, drawn from the real-life lessons of over 100 high achievers aged 40 and above — people who’ve made the mistakes, learned the hard truths, and are now passing the torch. Experience they say, is the best teacher but like I always add, not your experience but others as you may not live to tell yours. As Sir Isaac Newton once said, “If I have seen further, it is by standing on the shoulders of giants.” This book hands you that shoulder — so you can rise above confusion, avoid common pitfalls, and see clearly the path to purpose, fulfillment, and early success. Click below to gain access to timeless wisdom your future self will thank you for.',
     category: 'E-Book',
-    image: '/images/product1-social-media-the-new-money-making-machine.jpg',
+    image: '/images/Dear-Your-Product-1.jpeg',
     features: [
-      'Proven monetization strategies',
-      'Audience growth tactics',
-      'Content creation frameworks',
-      'Free Facebook Ad Course included',
-      'Step-by-step implementation guide'
+      'Survival guide for youth',
+      'Cheat Card to Success Before 40',
+      'Lessons from 100+ high achievers',
+      'Avoid common pitfalls',
+      'Path to purpose, fulfillment, and early success'
     ]
   },
   {
