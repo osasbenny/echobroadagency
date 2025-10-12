@@ -402,7 +402,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
           <p className="text-xl mb-8">
-            Join thousands of marketers and entrepreneurs who trust EchoBroad
+            Prefer a one-on-one session or done-for-you service? Join 5,000+ growing brands already transforming their results with Echobroad
           </p>
           <Link to="/store">
             <Button className="bg-white text-red hover:bg-gray-100 px-8 py-6 text-lg">
