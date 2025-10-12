@@ -145,7 +145,7 @@ export default function About() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-navy mb-1">Creative Director</h3>
+                <h3 className="text-xl font-semibold text-navy mb-1">Thankgod Minala</h3>
                 <p className="text-gold font-medium mb-2">Creative Director</p>
                 <p className="text-gray-600 text-sm">Visual Storytelling Expert</p>
               </div>
