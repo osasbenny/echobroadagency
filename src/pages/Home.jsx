@@ -395,7 +395,9 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
+      <section id="faq-section">
       <FAQSection />
+      </section>
 
       {/* CTA Section */}
       <section className="bg-red text-white py-20 px-4">

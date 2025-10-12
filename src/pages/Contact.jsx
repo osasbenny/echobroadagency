@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
@@ -180,9 +181,11 @@ export default function Contact() {
                 <p className="text-navy/80 mb-4">
                   Need immediate assistance? Check out our FAQ section or reach out via live chat during business hours.
                 </p>
-                <Button className="bg-navy hover:bg-navy/90 text-white">
-                  Visit FAQ
-                </Button>
+                <Link to="/#faq-section">
+                  <Button className="bg-navy hover:bg-navy/90 text-white">
+                    Visit FAQ
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
