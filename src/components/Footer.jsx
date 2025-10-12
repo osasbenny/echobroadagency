@@ -13,7 +13,8 @@ export default function Footer() {
               <span className="text-red">Broad</span>
             </div>
             <p className="text-gray-300 text-sm">
-              Digital marketing and creative media solutions that amplify your brand's voice.
+              Make your business the talk of town.
+              We don’t just run ads, we build what makes them convert. Ads. Creatives. Strategy.
             </p>
           </div>
 

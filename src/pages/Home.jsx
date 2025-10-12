@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { ShoppingBag, BookOpen, TrendingUp, Target, Zap, Users, Megaphone, PenTool, BarChart3, ArrowRight, Star, Quote } from 'lucide-react'
 import { blogPosts } from '../data/blog'
+import FAQSection from '../components/FAQSection'
 
 export default function Home() {
   const features = [
@@ -97,10 +98,9 @@ export default function Home() {
             From Strategy To Visuals, We Help Businesses Turn Views To Clients!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/store">
+            <Link to="/contact">
               <Button className="bg-red hover:bg-red/90 text-white px-8 py-6 text-lg">
-                <ShoppingBag className="mr-2" />
-                Browse Store
+                Book A Free Strategy Session
               </Button>
             </Link>
             <Link to="/courses">
@@ -184,7 +184,7 @@ export default function Home() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                  className="max-h-16 w-auto object-fill transition-all"
                 />
               </div>
             ))}
@@ -391,6 +391,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="bg-red text-white py-20 px-4">
