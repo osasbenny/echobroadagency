@@ -1,4 +1,9 @@
 <?php
+/**
+ * Contact Form Handler with PHPMailer and SMTP
+ * Sends emails using SMTP instead of PHP mail() function
+ */
+
 // Enable error reporting for debugging (disable in production)
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
@@ -23,7 +28,19 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
+// Load PHPMailer
+require_once 'PHPMailer/PHPMailer.php';
+require_once 'PHPMailer/SMTP.php';
+require_once 'PHPMailer/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 try {
+    // Load SMTP configuration
+    $config = require 'smtp-config.php';
+    
     // Get the JSON input
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
@@ -55,47 +72,67 @@ try {
         exit();
     }
 
-    // Recipient email
-    $to = 'info@echobroad.com';
+    // Create a new PHPMailer instance
+    $mail = new PHPMailer(true);
 
-    // Email subject
-    $email_subject = "Contact Form: " . $subject;
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = $config['smtp_host'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $config['smtp_username'];
+    $mail->Password   = $config['smtp_password'];
+    $mail->SMTPSecure = $config['smtp_encryption'];
+    $mail->Port       = $config['smtp_port'];
+    $mail->CharSet    = 'UTF-8';
+    
+    // Enable verbose debug output (set to 0 in production)
+    $mail->SMTPDebug  = $config['smtp_debug'];
+    
+    // Recipients
+    $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->addAddress($config['recipient_email']);
+    $mail->addReplyTo($email, $name);
 
-    // Email body (HTML format)
-    $email_body = "<!DOCTYPE html>
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = "Contact Form: " . $subject;
+    
+    // HTML email body
+    $mail->Body = "<!DOCTYPE html>
 <html>
 <head>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background-color: #1e3a8a; color: white; padding: 20px; text-align: center; }
-        .content { background-color: #f9fafb; padding: 20px; margin-top: 20px; }
-        .field { margin-bottom: 15px; }
-        .label { font-weight: bold; color: #1e3a8a; }
-        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+        .header { background-color: #1e3a8a; color: white; padding: 20px; text-align: center; border-radius: 5px 5px 0 0; }
+        .content { background-color: #f9fafb; padding: 20px; border: 1px solid #e5e7eb; }
+        .field { margin-bottom: 15px; padding: 10px; background-color: white; border-radius: 5px; }
+        .label { font-weight: bold; color: #1e3a8a; display: block; margin-bottom: 5px; }
+        .value { color: #374151; }
+        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; text-align: center; }
     </style>
 </head>
 <body>
     <div class='container'>
         <div class='header'>
-            <h2>New Contact Form Submission</h2>
+            <h2 style='margin: 0;'>New Contact Form Submission</h2>
         </div>
         <div class='content'>
             <div class='field'>
-                <span class='label'>Name:</span><br>
-                {$name}
+                <span class='label'>Name:</span>
+                <span class='value'>{$name}</span>
             </div>
             <div class='field'>
-                <span class='label'>Email:</span><br>
-                {$email}
+                <span class='label'>Email:</span>
+                <span class='value'>{$email}</span>
             </div>
             <div class='field'>
-                <span class='label'>Subject:</span><br>
-                {$subject}
+                <span class='label'>Subject:</span>
+                <span class='value'>{$subject}</span>
             </div>
             <div class='field'>
-                <span class='label'>Message:</span><br>
-                {$message}
+                <span class='label'>Message:</span>
+                <div class='value' style='white-space: pre-wrap;'>{$message}</div>
             </div>
         </div>
         <div class='footer'>
@@ -107,67 +144,36 @@ try {
 </html>";
 
     // Plain text version for email clients that don't support HTML
-    $email_body_plain = "New Contact Form Submission\n\n";
-    $email_body_plain .= "Name: {$name}\n";
-    $email_body_plain .= "Email: {$email}\n";
-    $email_body_plain .= "Subject: {$subject}\n\n";
-    $email_body_plain .= "Message:\n{$message}\n\n";
-    $email_body_plain .= "---\n";
-    $email_body_plain .= "This message was sent from the EchoBroad Agency website contact form.\n";
-    $email_body_plain .= "Received: " . date('Y-m-d H:i:s');
+    $mail->AltBody = "New Contact Form Submission\n\n";
+    $mail->AltBody .= "Name: {$name}\n";
+    $mail->AltBody .= "Email: {$email}\n";
+    $mail->AltBody .= "Subject: {$subject}\n\n";
+    $mail->AltBody .= "Message:\n{$message}\n\n";
+    $mail->AltBody .= "---\n";
+    $mail->AltBody .= "This message was sent from the EchoBroad Agency website contact form.\n";
+    $mail->AltBody .= "Received: " . date('Y-m-d H:i:s');
 
-    // Email headers
-    $headers = array();
-    $headers[] = "MIME-Version: 1.0";
-    $headers[] = "Content-Type: text/html; charset=UTF-8";
-    $headers[] = "From: EchoBroad Contact Form <noreply@echobroad.com>";
-    $headers[] = "Reply-To: {$name} <{$email}>";
-    $headers[] = "X-Mailer: PHP/" . phpversion();
-    $headers[] = "X-Priority: 1";
+    // Send email
+    $mail->send();
     
-    // Convert headers array to string
-    $headers_string = implode("\r\n", $headers);
+    // Log successful submission
+    error_log("Contact form submission successful from: {$email}");
+    
+    http_response_code(200);
+    echo json_encode([
+        'success' => true,
+        'message' => 'Thank you for your message! We will get back to you soon.'
+    ]);
 
-    // Attempt to send email
-    $mail_sent = @mail($to, $email_subject, $email_body, $headers_string);
-
-    if ($mail_sent) {
-        // Log successful submission
-        error_log("Contact form submission successful from: {$email}");
-        
-        http_response_code(200);
-        echo json_encode([
-            'success' => true,
-            'message' => 'Thank you for your message! We will get back to you soon.'
-        ]);
-    } else {
-        // Log failure
-        error_log("Contact form submission failed - mail() returned false");
-        
-        // Check if mail function exists
-        if (!function_exists('mail')) {
-            error_log("PHP mail() function is not available");
-            http_response_code(500);
-            echo json_encode([
-                'success' => false,
-                'message' => 'Email service is not configured on this server. Please contact the administrator.'
-            ]);
-        } else {
-            http_response_code(500);
-            echo json_encode([
-                'success' => false,
-                'message' => 'Sorry, there was an error sending your message. Please try again later or contact us directly at info@echobroad.com.'
-            ]);
-        }
-    }
 } catch (Exception $e) {
-    // Log the exception
+    // Log the error
     error_log("Contact form error: " . $e->getMessage());
     
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'An unexpected error occurred. Please try again later.'
+        'message' => 'Sorry, there was an error sending your message. Please try again later or contact us directly at info@echobroad.com.',
+        'error' => $config['smtp_debug'] > 0 ? $e->getMessage() : null
     ]);
 }
 ?>
