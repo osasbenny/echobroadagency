@@ -19,16 +19,33 @@ export default function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // In production, send to backend API
-    setTimeout(() => {
-      alert('Thank you for your message! We will get back to you soon.')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+    try {
+      const response = await fetch('/contact-handler.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      
+      const result = await response.json()
+      
+      if (result.success) {
+        alert(result.message)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        alert(result.message || 'There was an error sending your message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('There was an error sending your message. Please try again later.')
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   return (
