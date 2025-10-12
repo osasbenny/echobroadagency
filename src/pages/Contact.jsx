@@ -32,7 +32,21 @@ export default function Contact() {
         body: JSON.stringify(formData)
       })
       
-      const result = await response.json()
+      // Log response details for debugging
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      
+      // Try to parse JSON response
+      let result
+      try {
+        result = await response.json()
+        console.log('Response data:', result)
+      } catch (jsonError) {
+        console.error('Failed to parse JSON:', jsonError)
+        const text = await response.text()
+        console.error('Response text:', text)
+        throw new Error('Invalid server response')
+      }
       
       if (result.success) {
         alert(result.message)
@@ -41,8 +55,8 @@ export default function Contact() {
         alert(result.message || 'There was an error sending your message. Please try again.')
       }
     } catch (error) {
-      console.error('Error:', error)
-      alert('There was an error sending your message. Please try again later.')
+      console.error('Error submitting form:', error)
+      alert('There was an error sending your message. Please try again later or contact us directly at info@echobroad.com.')
     } finally {
       setIsSubmitting(false)
     }
