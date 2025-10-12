@@ -62,7 +62,9 @@ export default function Home() {
     { name: 'MelonyPine', logo: '/images/client13.jpeg' },
     { name: 'KINGSPiRE Resources', logo: '/images/client7.jpg' },
     { name: 'excelandgrace CONSULTING', logo: '/images/client9.jpg' },
-    { name: 'SWITCHPATH CONSULTING', logo: '/images/client1.jpg' }
+    { name: 'SWITCHPATH CONSULTING', logo: '/images/client1.jpg' },
+    { name: 'Riches & Saint', logo: '/images/Riches-logo.jpeg' },
+    { name: 'MINISO', logo: '/images/MINISO-Bag-Logo-400-X-340px.png' }
   ]
 
   const testimonials = [
