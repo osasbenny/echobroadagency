@@ -404,9 +404,9 @@ export default function Home() {
           <p className="text-xl mb-8">
             Join thousands of marketers and entrepreneurs who trust EchoBroad
           </p>
-          <Link to="/contact">
+          <Link to="/store">
             <Button className="bg-white text-red hover:bg-gray-100 px-8 py-6 text-lg">
-              Book A FREE Strategy Session
+              Browse Store
             </Button>
           </Link>
         </div>
