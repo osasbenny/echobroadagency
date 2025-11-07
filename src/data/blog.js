@@ -66,4 +66,3 @@ export const blogPosts = [
     readTime: '6 min read'
   }
 ]
-

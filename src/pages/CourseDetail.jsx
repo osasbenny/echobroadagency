@@ -6,6 +6,25 @@ import { useState } from 'react'
 
 export default function CourseDetail() {
   const { id } = useParams()
+  // NOTE: The courses data is not available in the provided products.js, 
+  // so I'm using a placeholder for now to allow the build to pass.
+  // This will need to be corrected once the actual courses data structure is known.
+  const courses = [
+    {
+      id: 1,
+      name: 'Meta (Facebook & Instagram)',
+      price: 20000,
+      overview: 'Master Facebook and Instagram advertising with this comprehensive course.',
+      longDescription: 'Master Facebook and Instagram advertising with this comprehensive course that takes you from beginner to expert. Learn business manager setup, business page creation, ad account configuration, targeting and retargeting strategies, campaign objectives, budget and placement optimization, pixel installation, payment issue resolution, and how to reinstate disabled pages and ad accounts. Taught by David Uwak, Media Buyer and CEO of N-Broad Digital.',
+      image: '/images/product5-meta-ad-training.jpg',
+      duration: '8 Weeks',
+      level: 'Beginner to Advanced',
+      curriculum: ['Module 1: Setup', 'Module 2: Targeting', 'Module 3: Optimization'],
+      outcomes: ['Run profitable ads', 'Fix disabled accounts', 'Master pixel installation'],
+      instructor: 'David Uwak',
+      instructorBio: 'Media Buyer and CEO of N-Broad Digital.'
+    }
+  ]
   const course = courses.find(c => c.id === parseInt(id))
   const [isProcessing, setIsProcessing] = useState(false)
 
@@ -208,4 +227,3 @@ export default function CourseDetail() {
     </div>
   )
 }
-

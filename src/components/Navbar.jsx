@@ -8,13 +8,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { name: 'Home', path: '/', icon: null },
+    { name: 'About Us', path: '/about', icon: null },
     { name: 'Our Services', path: '/services', icon: Briefcase },
     { name: 'E-Store', path: '/store', icon: ShoppingBag },
     { name: 'Courses', path: '/courses', icon: BookOpen },
     { name: 'Blog', path: '/blog', icon: FileText },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/contact', icon: null },
   ]
 
   return (
@@ -85,4 +85,3 @@ export default function Navbar() {
     </nav>
   )
 }
-

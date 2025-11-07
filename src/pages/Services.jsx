@@ -54,7 +54,7 @@ export default function Services() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="text-gold">Services</span>
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive digital marketing solutions tailored to grow your business and amplify your brand's voice
           </p>
         </div>
@@ -123,4 +123,3 @@ export default function Services() {
     </div>
   )
 }
-

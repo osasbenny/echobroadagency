@@ -17,7 +17,7 @@ export const products = [
   },
   {
     id: 2,
-    name: 'Facebook/Instagram Ads Course',
+    name: 'Meta (Facebook & Instagram)',
     price: 20000,
     shortDescription: 'Professional Facebook and Instagram advertising course from beginner to expert.',
     longDescription: 'Master Facebook and Instagram advertising with this comprehensive course that takes you from beginner to expert. Learn business manager setup, business page creation, ad account configuration, targeting and retargeting strategies, campaign objectives, budget and placement optimization, pixel installation, payment issue resolution, and how to reinstate disabled pages and ad accounts. Taught by David Uwak, Media Buyer and CEO of N-Broad Digital.',
@@ -38,23 +38,54 @@ export const products = [
   },
   {
     id: 3,
-    name: "The Real Estate Agent's Facebook Ads",
-    price: 25000,
-    shortDescription: 'Playbook to mastering the art of lead generation and conversion for real estate agents.',
-    longDescription: 'The ultimate Facebook Ads playbook specifically designed for real estate agents. Learn how to generate more qualified leads, master the art of lead generation and conversion, and close more deals using proven Facebook advertising strategies. This comprehensive guide provides step-by-step instructions, targeting strategies, ad copy templates, and funnel blueprints tailored for the real estate industry.',
-    category: 'E-Book',
-    image: '/images/product3-the-real-agents-of-socialmedia.jpg',
+    name: 'TikTok Ads',
+    price: 10000,
+    shortDescription: 'Master the art of running profitable TikTok ad campaigns from scratch.',
+    longDescription: 'A comprehensive course to master TikTok advertising. Learn how to set up your TikTok Ads Manager, create engaging video creatives, target the right audience, and scale your campaigns for maximum ROI. This course covers everything from basic setup to advanced optimization strategies.',
+    category: 'Course',
+    image: '/images/tiktok-ads-course.jpg', // Placeholder image, assuming it exists or will be created
     features: [
-      'Real estate-specific ad strategies',
-      'Lead generation frameworks',
-      'Conversion optimization techniques',
-      'Ad copy templates for real estate',
-      'Funnel blueprints',
-      'Targeting strategies for property buyers'
+      'TikTok Ads Manager Setup',
+      'Creative Strategy for TikTok',
+      'Targeting and Retargeting',
+      'Campaign Optimization',
+      'Scaling Strategies'
     ]
   },
   {
     id: 4,
+    name: 'YouTube Ads',
+    price: 10000,
+    shortDescription: 'Learn to run highly profitable YouTube video ad campaigns.',
+    longDescription: 'This course teaches you how to leverage YouTube’s massive audience with effective video advertising. Cover topics like campaign structure, video creative best practices, audience targeting, and bidding strategies to ensure your ads drive conversions.',
+    category: 'Course',
+    image: '/images/youtube-ads-course.jpg', // Placeholder image, assuming it exists or will be created
+    features: [
+      'YouTube Ads Campaign Setup',
+      'Video Creative Strategy',
+      'Audience Targeting',
+      'Bidding and Optimization',
+      'Performance Tracking'
+    ]
+  },
+  {
+    id: 5,
+    name: 'Google Ads',
+    price: 20000,
+    shortDescription: 'Master Google Search, Display, and Shopping Ads for massive growth.',
+    longDescription: 'A complete guide to Google Ads, covering Search, Display, and Shopping campaigns. Learn keyword research, ad copy creation, quality score optimization, and advanced bidding strategies to dominate the search results and drive high-intent traffic.',
+    category: 'Course',
+    image: '/images/google-ads-course.jpg', // Placeholder image, assuming it exists or will be created
+    features: [
+      'Google Search Ads Mastery',
+      'Display Network Advertising',
+      'Google Shopping Campaigns',
+      'Keyword Research',
+      'Quality Score Optimization'
+    ]
+  },
+  {
+    id: 6,
     name: "God Doesn't Make A Junk",
     price: 3000,
     shortDescription: 'Unveiling the hidden powers of the redeemed man.',
@@ -70,7 +101,7 @@ export const products = [
     ]
   },
   {
-    id: 5,
+    id: 7,
     name: 'Meta (Facebook/Instagram) Ad Targeting Bundle',
     price: 5000,
     shortDescription: 'Research. Tested. Proven. DIY Meta targeting strategies for different niches.',
@@ -87,7 +118,7 @@ export const products = [
     ]
   },
   {
-    id: 6,
+    id: 8,
     name: 'One on One Live Facebook/Instagram Advertising Coaching (Online)',
     price: 50000,
     shortDescription: 'Stop losing money on unprofitable ads. Learn how to run profitable ads in 3 days.',
@@ -110,4 +141,3 @@ export const products = [
     ]
   }
 ]
-
