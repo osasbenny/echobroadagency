@@ -1,0 +1,9 @@
+node_modules/
+.env
+
+# SMTP Configuration (contains sensitive credentials)
+# Note: A template version is included in the repo
+# Update smtp-config.php with your actual credentials after deployment
+# public/smtp-config.php
+# dist/smtp-config.php
+

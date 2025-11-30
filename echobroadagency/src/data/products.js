@@ -38,12 +38,12 @@ export const products = [
   },
   {
     id: 3,
-    name: 'TikTok Ads Mastery Blueprint',
+    name: 'TikTok Ads',
     price: 10000,
-    shortDescription: 'Learn how to create high-converting TikTok ads in minutes. This blueprint walks you through targeting, creative setup, campaign optimization, and the exact steps to launch ads that reach the right audience and drive real results for your business.',
-    longDescription: 'Learn how to create high-converting TikTok ads in minutes. This blueprint walks you through targeting, creative setup, campaign optimization, and the exact steps to launch ads that reach the right audience and drive real results for your business. Perfect for beginners and marketers ready to scale with TikTok ads.',
+    shortDescription: 'Master the art of running profitable TikTok ad campaigns from scratch.',
+    longDescription: 'A comprehensive course to master TikTok advertising. Learn how to set up your TikTok Ads Manager, create engaging video creatives, target the right audience, and scale your campaigns for maximum ROI. This course covers everything from basic setup to advanced optimization strategies.',
     category: 'Course',
-    image: '/images/tiktok-money-making.png',
+    image: '/images/tiktok-ads-course.jpg', // Placeholder image, assuming it exists or will be created
     features: [
       'TikTok Ads Manager Setup',
       'Creative Strategy for TikTok',
@@ -70,12 +70,12 @@ export const products = [
   },
   {
     id: 5,
-    name: 'Google Search Ads Mastery Blueprint',
+    name: 'Google Ads',
     price: 20000,
-    shortDescription: 'Learn how to drive sales by reaching the right people wherever they are — across Google Search, YouTube, Display, and more.',
-    longDescription: 'Learn how to drive sales by reaching the right people wherever they are — across Google Search, YouTube, Display, and more. This course shows you exactly how to set up profitable campaigns, target buyers with precision, and scale your results from zero to pro.',
+    shortDescription: 'Master Google Search, Display, and Shopping Ads for massive growth.',
+    longDescription: 'A complete guide to Google Ads, covering Search, Display, and Shopping campaigns. Learn keyword research, ad copy creation, quality score optimization, and advanced bidding strategies to dominate the search results and drive high-intent traffic.',
     category: 'Course',
-    image: '/images/Google-Search-Ads.png',
+    image: '/images/google-ads-course.jpg', // Placeholder image, assuming it exists or will be created
     features: [
       'Google Search Ads Mastery',
       'Display Network Advertising',
@@ -86,12 +86,12 @@ export const products = [
   },
   {
     id: 6,
-    name: 'The Future of Marketing is Community',
+    name: "God Doesn't Make A Junk",
     price: 3000,
-    shortDescription: 'In a world where AI writes content, funnels automate everything, and algorithms shift daily, one truth remains: people buy from people they trust.',
-    longDescription: 'In a world where AI writes content, funnels automate everything, and algorithms shift daily, one truth remains: people buy from people they trust. This ebook offers a bold but practical shift—from chasing clicks to building community. Whether you\'re a creator, coach, agency owner, or entrepreneur, Community-Driven Marketing equips you to: Stand out without relying on hacks, gimmicks, or paid ads Build deep connection—even with a small audience Convert trust into revenue—ethically and effortlessly Inside, you’ll find: ✅ Case studies (like Pace Morby’s $4M week without ads) ✅ Clear steps to start building community from scratch ✅ Tools, platforms, and formats that actually deepen engagement ✅ The mindset shift from transactional to transformational marketing ✅ How to monetize without breaking trust. If you\'re tired of shallow marketing advice and want to build something real, lasting, and human—this book is your guide. Because in 2025 and beyond, the brands that win won’t just sell — they’ll serve, listen, and lead with connection.',
+    shortDescription: 'Unveiling the hidden powers of the redeemed man.',
+    longDescription: 'A transformative book that unveils the hidden powers of the redeemed man. Discover your true identity in Christ, understand your purpose, and unlock the potential that God has placed within you. This inspiring read combines biblical principles with practical insights to help you live a life of significance and impact. Written by David Uwak.',
     category: 'E-Book',
-    image: '/images/RedandBlackTypographyBookCover.png',
+    image: '/images/god-doesn-t-make-a-junk-selar.co-61d362485b148.jpg',
     features: [
       'Biblical principles for identity',
       'Discovering your purpose',
@@ -102,12 +102,12 @@ export const products = [
   },
   {
     id: 7,
-    name: 'Social Media The New Money Selar',
+    name: 'Meta (Facebook/Instagram) Ad Targeting Bundle',
     price: 5000,
-    shortDescription: 'I Shared in the eBook; High income and in demand skills that can either get you a high income job offer or minimum 150k monthly working for yourself. Digital transformation and innovation for the new economy Strategies and websites to work and earn from on a daily basis. Business of your talent: Monetizing talent, knowledge and hobby. How to Build a high class portfolio online so prospects likes, trust and patronize you. The element of brainstorming in the process of idea creation. How to create awareness, increase visibility, generate impart and increase sales online. Exposing secrets sites for scholarship, grants, awards, internship, job offers within and outside the country. As bonus, I added my Facebook Ad course so that after you have gotten the skill or idea to execute, like I did, you can advertise it so people can patronize you. with Facebook/Instagram advert, you can reach the billions of people online anywhere in the world.',
-    longDescription: 'I Shared in the eBook; High income and in demand skills that can either get you a high income job offer or minimum 150k monthly working for yourself. Digital transformation and innovation for the new economy Strategies and websites to work and earn from on a daily basis. Business of your talent: Monetizing talent, knowledge and hobby. How to Build a high class portfolio online so prospects likes, trust and patronize you. The element of brainstorming in the process of idea creation. How to create awareness, increase visibility, generate impart and increase sales online. Exposing secrets sites for scholarship, grants, awards, internship, job offers within and outside the country. As bonus, I added my Facebook Ad course so that after you have gotten the skill or idea to execute, like I did, you can advertise it so people can patronize you. with Facebook/Instagram advert, you can reach the billions of people online anywhere in the world.',
-    category: 'E-Book',
-    image: '/images/social-media-the-new-mone-selar.co-641179fbbdf7b.jpg',
+    shortDescription: 'Research. Tested. Proven. DIY Meta targeting strategies for different niches.',
+    longDescription: 'This comprehensive targeting bundle provides research-backed, tested, and proven Meta (Facebook/Instagram) ad targeting strategies for different niches. Learn the interest, behaviour, and demographics that work best for various industries and audiences. Perfect for marketers and business owners who want to improve their ad performance and reduce wasted ad spend.',
+    category: 'Digital Product',
+    image: '/images/meta-targeting-bundle.jpg',
     features: [
       'Research-backed targeting strategies',
       'Interest-based targeting',
